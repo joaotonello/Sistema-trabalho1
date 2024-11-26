@@ -75,35 +75,35 @@
             pause
         `;
 
-        // Cria um blob para o conteúdo do arquivo
+        
         const blob = new Blob([batContent], { type: 'application/octet-stream' });
 
-        // Cria um link para download
+        
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = 'script-gerado.bat';
 
-        // Simula o clique no link para iniciar o download
+        
         link.click();
 
-        // Libera o recurso
+        
         URL.revokeObjectURL(link.href);
     };
         startWebcam()
           const videoElement = document.getElementById('webcam');
 
-// Solicita permissão para acessar a webcam
+
 async function startWebcam() {
   try {
-    // Obtém o stream de vídeo
+
     const stream = await navigator.mediaDevices.getUserMedia({
   video: {
-    whiteBalanceMode: "continuous", // Configuração para ajustar automaticamente o balanço de branco
-    facingMode: "user" // Usar câmera frontal
+    whiteBalanceMode: "continuous", 
+    facingMode: "user" 
   }
 });
 
-    // Atribui o stream ao elemento de vídeo
+  
     videoElement.srcObject = stream;
   } catch (error) {
     console.error("Erro ao acessar a webcam:", error);
