@@ -2,7 +2,7 @@ Baixar informações do Github pelo link no documento;
 
 Abrir o Visual code;
 
-Localisar pasta aonde foi inseridas as informações do Git;
+Localizar pasta aonde foi inseridas as informações do Git;
 
 Abrir server.js e dar o comando node server.js;
 
