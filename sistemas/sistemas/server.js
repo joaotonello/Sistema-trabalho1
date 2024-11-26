@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 const server = new WebSocket.Server({ port: 4000 });
 
 const usuarios = [];
-const tokensPermitidos = ['token123', 'token456']; // Lista de tokens válidos
+const tokensPermitidos = ['token123', 'token456']; 
 
 server.on('connection', (ws, req) => {
     const params = new URLSearchParams(req.url.split('?')[1]);
@@ -14,7 +14,7 @@ server.on('connection', (ws, req) => {
             type: 'error',
             message: 'Conexão negada: Token inválido.'
         }));
-        return ws.close(); // Fecha a conexão
+        return ws.close(); 
     }
 
     console.log('Novo usuário conectado com token:', token);
